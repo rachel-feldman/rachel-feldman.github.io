@@ -1,2 +1,4 @@
-	name: Rachel Feldman, Audience Consultant
-	markdow: kramdown
+name: Rachel Feldman, Audience Consultant
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
+
