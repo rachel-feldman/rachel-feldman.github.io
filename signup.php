@@ -1,8 +1,22 @@
-<form action="https://system.spektrix.com/<clientname>/website/secure/signup.aspx"
-method="POST">
-<input type="hidden" name="ReturnUrl" value="http://clientwebsite.org/signup.php" />
-First name: <input name="FirstName" type="text" />
-Last name: <input name="LastName" type="text" />
-Email address: <input name="Email" type="text" />
-<input type="submit" value="Signup" />
-</form>
+<body>
+<div class="FormResult">
+ <?php
+ if (isset($_GET['Error']) && $_GET['Error'] == 'EmailExists')
+ {
+ include 'EmailExistsMessage.html';
+ }
+ else if (isset($_GET['Error']) && $_GET['Error'] == 'NoEmail')
+ {
+ include 'NoEmailMessage.html';
+ }
+ else if (isset($_GET['Error']) && $_GET['Error'] == 'NoLastName')
+ {
+ include 'NoLastNameMessage.html';
+ }
+ else
+ {
+ include 'success.html';
+ }
+ ?>
+</div>
+</body>
